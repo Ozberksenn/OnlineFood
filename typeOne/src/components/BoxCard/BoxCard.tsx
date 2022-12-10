@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image } from "react-native";
 import React, { FC } from "react";
 import styles from "./BoxCard.style";
 import { FontAwesome } from "@expo/vector-icons";

@@ -16,22 +16,18 @@ import styles from "./HomeScreen.style";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "../../utils/useNavigation";
 import Loading from "../../components/Loading/Loading";
+import foodApi from "../../../assets/food.json";
 const HomeScreen: FC<Category> = () => {
   const [loading, setLoading] = useState<boolean>(true);
-  const [food, setFood] = useState<any>(null);
+  const [categories, setCategories] = useState<any>(null);
   const [restaurant, setRestaurant] = useState<any>(null);
   const navigation = useNavigation();
   useEffect(() => {
-    axios
-      .get("https://online-foods.herokuapp.com/food/availability/40012")
-      .then(function (response) {
-        setFood(response.data.categories);
-        setRestaurant(response.data.restaurants);
-        setLoading(false);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    setTimeout(() => {
+      setCategories(foodApi.categories);
+      setRestaurant(foodApi.restaurants);
+      setLoading(false);
+    }, 2000);
   }, []);
 
   if (loading) {
@@ -45,7 +41,7 @@ const HomeScreen: FC<Category> = () => {
       </View>
       <FlatList
         horizontal={true}
-        data={food}
+        data={categories}
         renderItem={({ item }) => <CategoryCard data={item} />}
       />
       <ScrollView>
@@ -57,15 +53,13 @@ const HomeScreen: FC<Category> = () => {
             renderItem={({ item }) => (
               <TouchableOpacity
                 onPress={() =>
-                  navigation.navigate("RestaurantsPage", {
-                    restaurant: item,
-                  })
+                  navigation.navigate("RestaurantsPage", { restaurant: item })
                 }
               >
                 <Image
                   style={styles.restaurantImage}
                   source={{
-                    uri: item?.images[0],
+                    uri: item.image,
                   }}
                 />
               </TouchableOpacity>
@@ -80,7 +74,7 @@ const HomeScreen: FC<Category> = () => {
             <Image
               style={styles.foodImage}
               source={{
-                uri: "https://online-foods.herokuapp.com/images/chicken_dry.jpg",
+                uri: "https://eticaretyap.com/data/uploads/2021/02/E-Ticaret-Firmalar%C4%B1-H%C4%B1zl%C4%B1-Teslimat-%C4%B0%C3%A7in-Neler-Yapmal%C4%B1d%C4%B1r.jpg",
               }}
             />
           </TouchableOpacity>

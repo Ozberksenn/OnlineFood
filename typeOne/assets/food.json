@@ -1,0 +1,58 @@
+{
+  "categories": [
+    {
+      "image": "https://images.deliveryhero.io/image/fd-tr/LH/wbly-hero.jpg",
+      "title": "Fast-Food"
+    },
+    {
+      "image": "https://www.coffeebeans.com.tr/images/kategoriler/filtre-kahve-resim2-203.png",
+      "title": "Coffee"
+    },
+    {
+      "image": "https://w0.peakpx.com/wallpaper/467/393/HD-wallpaper-food-dessert-still-life.jpg",
+      "title": "Desserts"
+    },
+    {
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1074500_11-ee0d41a.jpg",
+      "title": "Soup"
+    }
+  ],
+  "restaurants": [
+    {
+      "image": "https://media-cdn.tripadvisor.com/media/photo-s/1b/cf/67/a6/seraser-garden.jpg",
+      "restaurantInfo": [
+        {
+          "restaurantName": "Grand Friends Fish & Steak Restaurant",
+          "address": "Antalya / Kepez",
+          "phone": "(0242) 241 65 53",
+          "food": [
+            {
+              "image": "https://img.etimg.com/thumb/msid-68495044,width-1199,height-900,imgsize-1335371,overlay-etpanache/photo.jpg",
+              "name": "Fish",
+              "category": "Fast Food",
+              "price": "150"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "https://antalyacityzone.com/images/sehrini-tani/antalyanin-en-luks-7-restorani/501599655971.jpg",
+      "restaurantInfo": [
+        {
+          "restaurantName": "Chicken Royal",
+          "address": "Antalya / Muratpasa",
+          "phone": "(0242) 111 56 85",
+          "food": [
+            {
+              "image": "https://www.seriouseats.com/thmb/IZEAHrIKyaHMFIWFl5ss7VpvgN4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20210714-potato-starch-fried-chicken-vicky-wasik-seriouseats-20-17e193a6bf274bba9091810a0b18ef89.jpg",
+              "name": "Chicken",
+              "category": "Fast Food",
+              "price": "85"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

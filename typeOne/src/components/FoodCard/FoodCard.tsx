@@ -24,7 +24,7 @@ const FoodCard: FC<detailProps> = ({ data }) => {
         <Image
           style={styles.image}
           source={{
-            uri: data?.images[0],
+            uri: data.image,
           }}
         />
       </View>

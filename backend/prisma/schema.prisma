@@ -26,6 +26,17 @@ model Users {
   last_name  String
   password   String
   email      String  @unique
+  profilePhoto String
   createdAt  DateTime @default(now())
+  posts      Posts[]
+}
+
+model Posts {
+  id         Int  @id @default(autoincrement())
+  author_id  Int
+  post_image String
+  comment    String 
+  createdAt  DateTime @default(now())  
+  Users      Users @relation(fields: [author_id],references : [id])
 }
 

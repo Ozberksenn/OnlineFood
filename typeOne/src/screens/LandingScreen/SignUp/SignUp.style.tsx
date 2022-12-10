@@ -27,4 +27,10 @@ export default StyleSheet.create({
     borderTopLeftRadius: 25,
     alignItems: "center",
   },
+  errorContainer: {
+    marginLeft: 25,
+  },
+  errorMessage: {
+    color: "red",
+  },
 });

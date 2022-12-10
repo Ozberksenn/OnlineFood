@@ -37,6 +37,7 @@ export default StyleSheet.create({
     color: "#fff",
     fontSize: 24,
     marginVertical: 15,
+    marginRight: 30,
   },
   pincode: {
     color: "#fff",

@@ -1,4 +1,4 @@
-import { SafeAreaView, View, Text, TextInput, FlatList } from "react-native";
+import { SafeAreaView, View, TextInput, FlatList } from "react-native";
 import React, { useEffect, useState } from "react";
 import styles from "./FoodDetail.style";
 import { Ionicons } from "@expo/vector-icons";

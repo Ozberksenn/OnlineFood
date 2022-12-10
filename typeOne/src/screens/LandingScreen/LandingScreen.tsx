@@ -1,5 +1,5 @@
 import { View, Text, Image, SafeAreaView } from "react-native";
-import React, { useState, useReducer, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./LandingScrren.style";
 import * as Location from "expo-location";
 import { useNavigation } from "../../utils/useNavigation";

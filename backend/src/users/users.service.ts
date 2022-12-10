@@ -14,6 +14,8 @@ export class UsersService {
     const sign = await this.prisma.users.create({
       data: {
         name: input.name,
+        profilePhoto:
+          'https://www.pinclipart.com/picdir/middle/165-1653686_female-user-icon-png-download-user-colorful-icon.png',
         last_name: input.last_name,
         password: input.password,
         email: input.email,
@@ -39,12 +41,12 @@ export class UsersService {
       return 'Yok';
     }
   }
-  async param(id: number) {
-    const param = this.prisma.users.findMany({ where: { id } });
-    console.log(param);
-  }
   async remove(id: number) {
     const remove = this.prisma.users.delete({ where: { id } });
-    console.log(remove);
+    return remove;
+  }
+
+  async update(id: number, updateUserDto: UpdateUserDto) {
+    return this.prisma.users.update({ where: { id }, data: updateUserDto });
   }
 }

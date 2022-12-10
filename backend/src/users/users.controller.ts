@@ -27,6 +27,7 @@ export class UsersController {
       last_name: string;
       password: string;
       email: string;
+      profilePhoto: string;
     },
   ) {
     return await this.usersService.createUser(input);
@@ -35,14 +36,13 @@ export class UsersController {
   async signIn(@Body() input) {
     return await this.usersService.login(input);
   }
-  @Get(':id')
-  async param(@Param('id') id: number) {
-    console.log(id);
-    return this.usersService.param(id);
-  }
   @Delete(':id')
   remove(@Param('id') id: number) {
     console.log(id);
-    return this.usersService.remove(id);
+    return this.usersService.remove(+id);
+  }
+  @Patch(':id')
+  update(@Param('id') id: number, @Body() UpdateUserDto: UpdateUserDto) {
+    return this.usersService.update(+id, UpdateUserDto);
   }
 }

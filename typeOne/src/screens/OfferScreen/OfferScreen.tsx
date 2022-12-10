@@ -23,7 +23,7 @@ const OfferScreen = () => {
         <OfferCard
           text="50%"
           title="50%"
-          image="https://gotaiwanlab.com/wp-content/uploads/2020/03/foodpanda-coupon.001.jpeg"
+          image="https://img.freepik.com/free-psd/mexican-restaurant-weekend-offer-banner_23-2148486802.jpg?w=2000"
         />
       </ScrollView>
     </SafeAreaView>
