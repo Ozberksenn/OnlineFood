@@ -17,7 +17,7 @@ const PostScreen = () => {
 
   useEffect(() => {
     try {
-      axios.get("http://192.168.1.4:3000/posts").then((response) => {
+      axios.get("http://10.22.16.1:3000/posts").then((response) => {
         setPost(response.data);
       });
     } catch (error) {

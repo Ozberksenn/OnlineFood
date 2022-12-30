@@ -29,8 +29,8 @@ const switchNavigator = createSwitchNavigator({
   landingStack: {
     screen: createStackNavigator(
       {
-        // SignInPage: SignIn,
-        // SignUpPage: SignUp,
+        SignInPage: SignIn,
+        SignUpPage: SignUp,
         Landing: LandingScreen,
       },
       {

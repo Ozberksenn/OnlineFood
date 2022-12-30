@@ -24,7 +24,7 @@ const SignIn = () => {
     try {
       if (values.email && values.password) {
         await axios
-          .post("http://10.22.25.180:3000/users/login", {
+          .post("http://10.22.16.1:3000/users/login", {
             email: values.email,
             password: values.password,
           })
